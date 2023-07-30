@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+        android:duration="@android:integer/config_shortAnimTime"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:fromAlpha="0"
+        android:toAlpha="1"/>
+</set>
+
+<!--
+duration : ms 단위의 Animation 동작 시간
+interpolator : Animation 동작 방식
+fromAlpha : 시작 투명도
+toAlpha : 종료 투명도
+-->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="@android:integer/config_shortAnimTime"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:fromXDelta="100%"
+        android:toXDelta="0%"/>
+</set>
+
+<!--
+fromXDelta  : 시작 가로 위치 ( 좌표 or 비율 )
+toXDelta    : 끝 가로 위치
+fromYDelta  : 시작 세로 위치
+toYDelta    : 끝 세로 위치
+-->
