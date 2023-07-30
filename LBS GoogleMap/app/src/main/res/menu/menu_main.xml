@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_main_location"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="현재 위치"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_main_select"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="장소 선택"
+        app:showAsAction="always" />
+</menu>
