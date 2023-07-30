@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
                     val radius = 50000
                     val language = "ko"
                     val type = dialogData[i]
-                    val key = "AIzaSyDdDMV3gpkyTgCUdz7uHRO52jJxCnq2xb0"
+                    val key = "API key"
                     val site =
                         "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${radius}&language=${language}&type=${type}&key=${key}"
 
