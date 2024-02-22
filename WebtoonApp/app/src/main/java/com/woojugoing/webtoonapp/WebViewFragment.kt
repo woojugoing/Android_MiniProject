@@ -22,7 +22,7 @@ class WebViewFragment: Fragment() {
         fragmentWebViewBinding.webview.run {
             webViewClient = WebtoonViewClient(fragmentWebViewBinding.progressWebView)
             settings.javaScriptEnabled = true
-            loadUrl("https://comic.naver.com")
+            loadUrl("https://comic.naver.com/webtoon/detail?titleId=783053&no=121&week=tue")
         }
     }
 }

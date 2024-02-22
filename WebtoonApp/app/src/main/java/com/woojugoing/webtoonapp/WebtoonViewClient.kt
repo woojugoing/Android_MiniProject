@@ -21,8 +21,10 @@ class WebtoonViewClient(val progressBar: ProgressBar): WebViewClient() {
     }
 
     override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-        return false
+        if(request != null && request.url.toString().contains("comic.naver.com")) return false else return true
     }
+
+
 
     override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
         super.onReceivedError(view, request, error)
