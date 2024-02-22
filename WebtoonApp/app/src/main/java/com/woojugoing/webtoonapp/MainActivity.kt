@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
                     commit()
                 }
             }
+
+            btn2.setOnClickListener {
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.fragmentContainer, WebViewFragment())
+                    commit()
+                }
+            }
         }
     }
 }
