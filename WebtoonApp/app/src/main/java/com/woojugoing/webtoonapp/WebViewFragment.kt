@@ -34,11 +34,7 @@ class WebViewFragment(private val position: Int, private val webViewURL: String)
             btnWebViewBackToLast.setOnClickListener {
                 val sharedPreferences = activity?.getSharedPreferences("WEB_HISTORY", Context.MODE_PRIVATE)
                 val url = sharedPreferences?.getString("tab $position", "")
-                if(url.isNullOrEmpty()) {
-                    Toast.makeText(context, getString(R.string.back_to_history_error_message), Toast.LENGTH_SHORT).show()
-                } else {
-                    fragmentWebViewBinding.webview.loadUrl(url)
-                }
+                if(url.isNullOrEmpty()) Toast.makeText(context, getString(R.string.back_to_history_error_message), Toast.LENGTH_SHORT).show() else fragmentWebViewBinding.webview.loadUrl(url)
             }
             btnWebViewChangeTab.setOnClickListener {
                 val dialog = AlertDialog.Builder(context)
@@ -52,9 +48,7 @@ class WebViewFragment(private val position: Int, private val webViewURL: String)
                             listener?.nameChanged(position, editText.text.toString())
                         }
                     }
-                    setNegativeButton(getString(R.string.cancel)) { dialogInterface, _ ->
-                        dialogInterface.cancel()
-                    }
+                    setNegativeButton(getString(R.string.cancel)) { dialogInterface, _ -> dialogInterface.cancel() }
                     show()
                 }
             }
@@ -65,6 +59,4 @@ class WebViewFragment(private val position: Int, private val webViewURL: String)
     fun goBack() { fragmentWebViewBinding.webview.goBack() }
 }
 
-interface OnTabLayoutNameChanged {
-    fun nameChanged(position: Int, name: String)
-}
+interface OnTabLayoutNameChanged { fun nameChanged(position: Int, name: String) }
