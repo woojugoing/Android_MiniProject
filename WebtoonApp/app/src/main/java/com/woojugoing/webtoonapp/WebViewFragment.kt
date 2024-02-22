@@ -20,9 +20,9 @@ class WebViewFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fragmentWebViewBinding.webview.run {
-            webViewClient = WebViewClient()
+            webViewClient = WebtoonViewClient(fragmentWebViewBinding.progressWebView)
             settings.javaScriptEnabled = true
-            loadUrl("https://google.com")
+            loadUrl("https://comic.naver.com")
         }
     }
 }
