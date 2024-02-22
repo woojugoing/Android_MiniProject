@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             btn2.setOnClickListener {
                 supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.fragmentContainer, WebViewFragment())
+                    replace(R.id.fragmentContainer, SecondFragment())
                     commit()
                 }
             }
