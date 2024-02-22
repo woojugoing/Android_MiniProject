@@ -25,4 +25,12 @@ class WebViewFragment: Fragment() {
             loadUrl("https://comic.naver.com/webtoon/detail?titleId=783053&no=121&week=tue")
         }
     }
+
+    fun canGoBack(): Boolean {
+        return fragmentWebViewBinding.webview.canGoBack()
+    }
+
+    fun goBack() {
+        fragmentWebViewBinding.webview.goBack()
+    }
 }
